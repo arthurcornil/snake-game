@@ -18,8 +18,6 @@ void	grow(t_snake *snake)
 	snake->positions[snake->length - 1] = snake->positions[snake->length - 2];
 }
 
-#include <stdio.h>
-
 void	update_snake(t_snake *snake)
 {
 	Color green = {50, 168, 82, 255};
