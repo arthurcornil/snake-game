@@ -1,8 +1,8 @@
 #include "../includes/snake.h"
 
-t_snake	init_snake()
+t_snake	init_snake(void)
 {
-	t_snake snake;
+	t_snake	snake;
 
 	snake.direction = RIGHT;
 	snake.positions[0] = (t_point){20, 20};
@@ -20,8 +20,9 @@ void	grow(t_snake *snake)
 
 void	update_snake(t_snake *snake)
 {
-	Color green = {50, 168, 82, 255};
+	Color	green;
 
+	green = (Color){50, 168, 82, 255};
 	for(int i = snake->length - 1; i > 0; i--)
 	{
 		snake->positions[i] = snake->positions[i - 1];
